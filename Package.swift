@@ -1,21 +1,22 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
-let package =   Package(
-  name: "SCLAlertView",
-  platforms: [.iOS(.v8)],
-  products: [
-    .library(name: "SCLAlertView", targets: ["SCLAlertView"]),
-  ],
-  targets: [
-    .target(name: "SCLAlertView", path: "SCLAlertView"),
-    .testTarget(
-      name: "SCLAlertViewTests",
-      dependencies: ["SCLAlertView"],
-      path: "SCLAlertViewTests"
-    )
-  ],
-  swiftLanguageVersions: [.v5]
+
+let package = Package(
+    name: "SCLAlertView",
+    platforms: [
+        .iOS(.v11)
+    ],
+    products: [
+        .library(name: "SCLAlertView", targets: ["SCLAlertView"]),
+    ],
+    dependencies: [
+
+    ],    
+    targets: [
+        .target(name: "SCLAlertView", path: "SCLAlertView"),
+    ],
+    swiftLanguageVersions: [.version("5")]
 )
